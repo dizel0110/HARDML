@@ -1,0 +1,10 @@
+FROM python:3.9
+
+RUN pip install \
+    mlflow==1.14.1 \
+    boto3 \
+    psycopg2-binary
+
+EXPOSE 5000/tcp
+
+CMD ["mlflow", "server"]

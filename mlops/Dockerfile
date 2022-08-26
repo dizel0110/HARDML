@@ -1,0 +1,1 @@
+FROM --platform=amd64 continuumio/anaconda3:latest

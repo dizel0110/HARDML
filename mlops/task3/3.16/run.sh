@@ -1,0 +1,1 @@
+docker exec mlops_task3 sh -c "echo c > /var/master.fifo"

@@ -1,0 +1,1 @@
+docker run -d --rm -p 9090:9090 --name mlops_task3 mlops:task3
