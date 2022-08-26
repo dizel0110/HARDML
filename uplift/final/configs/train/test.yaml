@@ -1,0 +1,21 @@
+featurise: base
+sample_frac: 0.1
+transformers: 
+  -
+    name: label_encoder
+    args: 
+      columns: ['location'] 
+selectors: 
+  -
+    name: dummy_selector
+    args: {}
+model: 
+  name: uplift_random_forest  
+  args: 
+    evaluationFunction: ED
+    random_state: 110894
+validation: 
+  test_size: 0.3
+evaluation: 
+  bin_count: 50
+  cutoff_step: 0.01

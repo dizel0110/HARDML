@@ -1,0 +1,41 @@
+Root
+n_items: 50000
+ATE: 0.8133621067075059
+split_feat: feat0
+split_threshold: 0.8428329389786856
+
+	Left
+	n_items: 40000
+	ATE: 0.45661983599928
+	split_feat: feat0
+	split_threshold: -0.9878097589516122
+
+		Left <leaf>
+		n_items: 8000
+		ATE: -0.708939125981635
+		split_feat: None
+		split_threshold: None
+
+		Right
+		n_items: 32000
+		ATE: 0.7439039464385134
+		split_feat: feat1
+		split_threshold: 0.8401218986161383
+
+			Left <leaf>
+			n_items: 25600
+			ATE: 0.5381690182796856
+			split_feat: None
+			split_threshold: None
+
+			Right <leaf>
+			n_items: 6400
+			ATE: 1.5773329275902113
+			split_feat: None
+			split_threshold: None
+
+	Right <leaf>
+	n_items: 10000
+	ATE: 2.2242964961219096
+	split_feat: None
+	split_threshold: None

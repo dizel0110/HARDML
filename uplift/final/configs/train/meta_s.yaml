@@ -1,0 +1,26 @@
+featurise: base
+sample_frac: 0.1
+transformers: 
+  -
+    name: imputer
+    args: 
+      columns: all
+      fill_values: 0
+  -
+    name: label_encoder
+    args: 
+      columns: ['location'] 
+selectors: 
+  -
+    name: dummy_selector
+    args: {}
+model: 
+  name: meta_s  
+  args: {}
+validation: 
+  test_size: 0.3
+evaluation: 
+  bin_count: 50
+  cutoff_step: 0.01
+  n_bootstraps: 30
+  bootstrap_size: 0.05

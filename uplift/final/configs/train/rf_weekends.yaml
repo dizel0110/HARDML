@@ -1,0 +1,38 @@
+featurise: advanced
+sample_frac: 0.1
+transformers: 
+  -
+    name: imputer
+    args: 
+      columns: all
+      fill_values: 0
+  -
+    name: label_encoder
+    args: 
+      columns: ['location'] 
+selectors: 
+  -
+    name: dummy_selector
+    args: {}
+model: 
+  name: random_forest  
+  args: 
+    evaluationFunction: ED
+    random_state: 110894
+validation: 
+  test_size: 0.3
+search:
+  param_distributions: 
+    model__n_estimators: [5, 10, 25, 50, 100, 125, ]
+    model__max_features: [3, 5, 10, 15, ]
+    model__max_depth: [2, 3, 5, 7, 9, 10, ]
+    model__min_samples_leaf: [25, 50, 100, 150, 200, 300, ]
+    model__min_samples_treatment: [5, 10, 50, 100, 200, ]
+    model__n_reg: [1, 10, 100, 1000, ]
+  n_iter: 200
+  cv: 3
+evaluation: 
+  bin_count: 50
+  cutoff_step: 0.01
+  n_bootstraps: 30
+  bootstrap_size: 0.05

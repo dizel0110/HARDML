@@ -1,0 +1,28 @@
+calcers: 
+  - 
+    name: 'campaign'
+    args: 
+      date_start_offer: 102
+      days_offer: 7
+  - 
+    name: 'purchases_agg'
+    args: 
+      col_date: 'date'
+      date_to: 102
+      delta: 30
+  - 
+    name: 'purchases_agg'
+    args: 
+      col_date: 'date'
+      date_to: 102
+      delta: 60
+  - 
+    name: 'day_of_week_purchases'
+    args: 
+      col_date: 'date'
+      date_to: 102
+      delta: 30
+      weekends: [5, 6]
+  - 
+    name: 'age_location'
+    args: {}
