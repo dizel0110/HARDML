@@ -1,0 +1,9 @@
+numpy
+pyyaml
+scipy
+ipython 
+flask
+mkl 
+pandas
+scikit-learn
+catboost
